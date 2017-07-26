@@ -3,7 +3,9 @@
     android:id="@+id/draw_insets_frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <com.example.xyzreader.ui.ObservableScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
@@ -95,12 +97,15 @@
     <android.support.design.widget.FloatingActionButton android:id="@+id/share_fab"
         android:stateListAnimator="@anim/fab_state_list_anim"
         android:layout_gravity="bottom|end"
+        app:layout_behavior=".ui.ScrollBehavior"
         android:layout_marginRight="@dimen/fab_margin"
         android:layout_marginBottom="@dimen/fab_margin"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:src="@drawable/ic_share"
+
         android:elevation="@dimen/fab_elevation"
         android:contentDescription="@string/action_share" />
+</android.support.design.widget.CoordinatorLayout>
 
 </com.example.xyzreader.ui.DrawInsetsFrameLayout>
